@@ -18,6 +18,7 @@ public class IndexController {
     @Autowired
     private SalesmanRepository salesmanRepository;
 
+    // Lnading Page
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("salesman", new Salesman());
@@ -33,6 +34,7 @@ public class IndexController {
         return "index";
     }
 
+    // Save Record
     @PostMapping("/save")
     public String saveEntity(@ModelAttribute Salesman entity) {
         salesmanRepository.save(entity);
@@ -40,12 +42,14 @@ public class IndexController {
         return "redirect:/";
     }
 
+    // Delete Record
     @GetMapping("/delete/{id}")
     public String deleteSalesman(@PathVariable Long id) {
         salesmanRepository.deleteById(id);
         return "redirect:/";
     }
 
+    // Edit Record
     @GetMapping("/edit/{id}")
     public String editSalesman(@PathVariable Long id, Model model) {
         Optional<Salesman> salesman = salesmanRepository.findById(id);
