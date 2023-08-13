@@ -45,7 +45,7 @@
       </select>
 
       <label>Sales Amount</label>
-      <input type="number" min="0.01" th:field="*{amount}" required title="Sales cannot be 0">
+      <input type="number" min="1" th:field="*{amount}" required title="Sales cannot be 0">
 
       <label>Transaction Date</label>
       <input type="date" placeholder="YYYY-MM-DD" th:field="*{dot}" required title="Data cannot be blank">

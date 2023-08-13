@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+// GitHub Repo: https://github.com/BillyLam821/Salesman
 @CrossOrigin(origins = "http://localhost:3000")
 @Controller
 public class IndexController {
